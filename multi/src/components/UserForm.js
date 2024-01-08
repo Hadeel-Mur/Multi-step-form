@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
+import Confirm from './Confirm';
 
 const UserForm = () => {
   const [step, setStep] = useState(1);
@@ -56,7 +57,14 @@ const UserForm = () => {
         />
       );
     case 3:
-      return <h1>confirm</h1>;
+      // console.log("Confirm Component Values:", values);
+      return (
+        <Confirm
+          nextStep={nextStep}
+          prevStep={prevStep}
+          values={values}
+        />
+      );
     case 4:
       return <h1>success</h1>;
     default:
