@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
+import Success from './Success';
+
 
 const UserForm = () => {
   const [step, setStep] = useState(1);
@@ -66,7 +68,9 @@ const UserForm = () => {
         />
       );
     case 4:
-      return <h1>success</h1>;
+      return (
+        <Success/>
+      );
     default:
       return null; 
   }
